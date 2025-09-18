@@ -1,0 +1,101 @@
+{
+  "expo": {
+    "name": "ExpoBoilerplate",
+    "slug": "ExpoBoilerplate",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./src/assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptiveicon.png",
+        "backgroundColor": "#1E1E20"
+      },
+      "package": "com.cogneiss.ExpoBoilerplate"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./src/assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./src/assets/images/splashicon.png",
+          "imageWidth": 300,
+          "resizeMode": "contain",
+          "backgroundColor": "#1E1E20"
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(Expo Boiler Plate) to access your camera",
+          "microphonePermission": "Allow $(Expo Boiler Plate) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "custom photos permission",
+          "cameraPermission": "Allow $(ExpoBoilerplate) to open the camera",
+          "//": "Disables the microphone permission",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow $(ExpoBoilerplate) to access your microphone."
+        }
+      ],
+      "@config-plugins/react-native-blob-util",
+      "@config-plugins/react-native-pdf",
+      "expo-font",
+      "expo-video",
+      "expo-audio",
+      [
+        "expo-custom-assets",
+        {
+          "assetsPaths": [
+            "./src/assets/images/"
+          ]
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "DEFAULT"
+        }
+      ],
+      "react-native-video"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_YWxsb3dlZC1rb2FsYS0zMS5jbGVyay5hY2NvdW50cy5kZXYk",
+      "eas": {
+        "projectId": "6b74e10a-4185-43fb-82d7-695901eef0d1"
+      }
+    }
+  }
+}
